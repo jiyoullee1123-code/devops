@@ -1,0 +1,14 @@
+services:
+  web:
+    image: nginx:alpine
+    expose:
+      - "80"
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
+
